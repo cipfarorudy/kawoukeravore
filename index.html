@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kawoukeravore Guadeloupe - Plateforme de mise en relation</title>
+
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#10b981">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Rejoindre le groupe Kawoukeravore sur WhatsApp">
+    <meta property="og:description" content="Entreprises, artisans et clients en Guadeloupe – rejoignez le réseau Kawoukeravore.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://exemple.com/kawoukeravore-whatsapp">
+    <meta property="og:image" content="https://exemple.com/static/kawoukeravore-cover.jpg">
+    <link rel="canonical" href="https://exemple.com/kawoukeravore-whatsapp">
+    <!-- Favicons (replace paths with your actual files) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <meta name="description" content="Plateforme de mise en relation des entreprises et clients en Guadeloupe. Soutenons notre économie locale.">
     
     <!-- Styles -->
@@ -628,7 +643,63 @@
                 font-size: 24px;
             }
         }
-    </style>
+    
+/* ===== Kawoukeravore WhatsApp Invitation (scoped) ===== */
+.kw { padding: 40px 0; }
+.kw .content {
+  background: #fff; border-radius: 16px; padding: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,.1);
+}
+.kw .section-title { font-size: 24px; font-weight: 800; color: var(--dark); margin-bottom: 20px; text-align: center; }
+.kw .instructions { margin-bottom: 30px; }
+.kw .step {
+  display: flex; gap: 15px; margin-bottom: 16px; padding: 14px 16px; border-radius: 12px;
+  background: rgba(16,185,129,.08);
+}
+.kw .step-number {
+  background: var(--primary); color: #fff; width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; font-weight: 800; flex-shrink: 0;
+}
+.kw .step-content h3 { font-size: 18px; margin-bottom: 6px; color: var(--dark); }
+.kw .step-content p { color: var(--gray); font-size: 14px; }
+.kw .qr-code { text-align: center; margin: 28px 0; }
+.kw .qr-frame {
+  width: 220px; height: 220px; margin-inline: auto; border-radius: 12px; background: #fff;
+  border: 1px dashed var(--light-gray); display: grid; place-items: center; overflow: hidden;
+}
+.kw .qr-caption { margin-top: 10px; font-size: 14px; color: var(--gray); }
+.kw .whatsapp-link { background: var(--whatsapp); color: #fff; text-align: center; padding: 22px; border-radius: 12px; margin: 28px 0; }
+.kw .whatsapp-link h3 { font-size: 20px; margin-bottom: 8px; }
+.kw .btn-whatsapp {
+  display: inline-flex; align-items: center; gap: 10px; background: #fff; color: var(--whatsapp-dark);
+  padding: 14px 24px; border-radius: 10px; text-decoration: none; font-weight: 800; font-size: 16px;
+  transition: transform .2s ease, box-shadow .2s ease; will-change: transform;
+}
+.kw .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,211,102,.28); }
+.kw .btn-whatsapp:active { transform: scale(.98); }
+.kw .group-info { background: rgba(16,185,129,.08); border-radius: 12px; padding: 18px; margin: 26px 0; }
+.kw .info-item { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
+.kw .info-icon { color: var(--primary); font-size: 20px; width: 24px; text-align: center; }
+.kw .info-text { font-size: 14px; color: var(--gray); }
+.kw .benefits { margin: 26px 0; }
+.kw .benefits h3 { font-size: 18px; margin-bottom: 12px; color: var(--dark); }
+.kw .benefits ul { list-style: none; margin-left: 8px; }
+.kw .benefits li { margin-bottom: 10px; padding-left: 26px; position: relative; color: var(--gray); font-size: 14px; }
+.kw .benefits li::before { content: "✓"; color: var(--primary); position: absolute; left: 0; font-weight: 900; }
+.kw .group-rules h3 { font-size: 18px; margin-bottom: 12px; color: var(--dark); }
+.kw .group-rules ul { margin-left: 22px; }
+.kw .group-rules li { margin-bottom: 8px; color: var(--gray); font-size: 14px; }
+@media (max-width: 600px) {
+  .kw .content { padding: 20px; }
+  .kw header h1 { font-size: 22px; line-height: 1.25; }
+  .kw .btn-whatsapp { padding: 12px 20px; font-size: 15px; }
+  .kw .qr-frame { width: 180px; height: 180px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kw .btn-whatsapp { transition: none; }
+}
+
+</style>
 </head>
 <body>
     <!-- Header -->
@@ -861,6 +932,86 @@
         </div>
     </footer>
 
+    <!-- Kawoukeravore – Invitation WhatsApp (Fusion Finale) -->
+    <section class="kw" id="whatsapp-invite">
+      <div class="container">
+        <div class="content" role="region" aria-labelledby="kw-title">
+          <h2 id="kw-title" class="section-title">Rejoignez notre groupe WhatsApp</h2>
+
+          <section class="instructions" aria-labelledby="kw-howto">
+            <h3 id="kw-howto" class="visually-hidden" style="position:absolute;left:-9999px;">Instructions</h3>
+            <div class="step">
+              <div class="step-number" aria-hidden="true">1</div>
+              <div class="step-content">
+                <h3>Ouvrez WhatsApp</h3>
+                <p>Lancez l'application WhatsApp sur votre téléphone mobile.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number" aria-hidden="true">2</div>
+              <div class="step-content">
+                <h3>Scannez le code QR</h3>
+                <p>Utilisez la fonction de scan de code QR dans WhatsApp pour scanner le code ci-dessous.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number" aria-hidden="true">3</div>
+              <div class="step-content">
+                <h3>Rejoignez le groupe</h3>
+                <p>Appuyez sur « Rejoindre » pour devenir membre du groupe Kawoukeravore.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="qr-code" aria-labelledby="kw-qr-label">
+            <div class="qr-frame" id="kw-qr" role="img" aria-label="QR code pour rejoindre le groupe WhatsApp"></div>
+            <p id="kw-qr-label" class="qr-caption"><strong>Scannez ce code pour rejoindre le groupe</strong></p>
+          </section>
+
+          <section class="whatsapp-link" aria-labelledby="kw-cta-title">
+            <h3 id="kw-cta-title">Rejoindre directement via lien</h3>
+            <p>Cliquez sur le bouton ci-dessous pour rejoindre le groupe Kawoukeravore sur WhatsApp</p>
+            <a class="btn-whatsapp" id="kw-joinBtn" href="#" target="_blank" rel="noopener noreferrer" aria-label="Rejoindre le groupe WhatsApp">
+              💬 Rejoindre le groupe WhatsApp
+            </a>
+            <p style="font-size:12px; opacity:.9; margin-top:10px">Lien valable pour les nouveaux membres</p>
+          </section>
+
+          <section class="group-info" aria-labelledby="kw-group-info-title">
+            <h3 id="kw-group-info-title" style="margin-bottom:10px;color:var(--dark);">Informations sur le groupe</h3>
+            <div class="info-item"><span class="info-icon" aria-hidden="true">👥</span><span class="info-text"><strong>Public&nbsp;:</strong> Entreprises, artisans, producteurs et clients en Guadeloupe</span></div>
+            <div class="info-item"><span class="info-icon" aria-hidden="true">📍</span><span class="info-text"><strong>Localisation&nbsp;:</strong> Guadeloupe, Antilles françaises</span></div>
+            <div class="info-item"><span class="info-icon" aria-hidden="true">🎯</span><span class="info-text"><strong>Objectif&nbsp;:</strong> Mise en relation et soutien de l'économie locale</span></div>
+            <div class="info-item"><span class="info-icon" aria-hidden="true">📅</span><span class="info-text"><strong>Créé le&nbsp;:</strong> 15 janvier 2024</span></div>
+          </section>
+
+          <section class="benefits" aria-labelledby="kw-benefits-title">
+            <h3 id="kw-benefits-title">Avantages de rejoindre le groupe</h3>
+            <ul>
+              <li>Mise en relation directe entre entreprises et clients</li>
+              <li>Partage d'offres et de demandes locales</li>
+              <li>Soutien à l'économie guadeloupéenne</li>
+              <li>Accès à un réseau professionnel solidaire</li>
+              <li>Information en temps réel sur les produits et services locaux</li>
+              <li>Opportunités d'affaires et de collaboration</li>
+            </ul>
+          </section>
+
+          <section class="group-rules" aria-labelledby="kw-rules-title">
+            <h3 id="kw-rules-title">Règles du groupe</h3>
+            <ul>
+              <li>Respecter tous les membres</li>
+              <li>Ne pas publier de contenu inapproprié</li>
+              <li>Respecter la confidentialité</li>
+              <li>Éviter les messages publicitaires non sollicités</li>
+              <li>Contribuer positivement à la communauté</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/590690570846" class="whatsapp-float" target="_blank">
         💬
@@ -929,6 +1080,37 @@
             }
         });
     </script>
+
+  <!-- QRCode.js (léger et sans dépendance) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // ⚙️ Lien officiel du groupe (à remplacer si besoin)
+      const GROUP_LINK = 'https://chat.whatsapp.com/KawoukeravoreGP';
+      // Bouton
+      const joinBtn = document.getElementById('kw-joinBtn');
+      if (joinBtn) joinBtn.href = GROUP_LINK;
+      // QR
+      const qrEl = document.getElementById('kw-qr');
+      if (qrEl && window.QRCode) {
+        try {
+          qrEl.innerHTML = '';
+          new QRCode(qrEl, {
+            text: GROUP_LINK,
+            width: 220,
+            height: 220,
+            colorDark: '#000000',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.M
+          });
+        } catch (e) {
+          console.error('Échec génération QR:', e);
+          qrEl.innerHTML = '<span style="color:var(--gray);font-size:14px">Impossible de générer le QR. <a href="' + GROUP_LINK + '" style="color:var(--primary);font-weight:700">Cliquez ici pour rejoindre</a>.</span>';
+        }
+      }
+    });
+  </script>
+
 </body>
 </html>
 ```
