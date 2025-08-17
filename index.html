@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,6 +12,8 @@
         :root {
             --primary: #10b981;
             --primary-dark: #059669;
+            --whatsapp: #25D366;
+            --whatsapp-dark: #128C7E;
             --secondary: #f59e0b;
             --dark: #1f2937;
             --light: #f9fafb;
@@ -171,6 +174,18 @@
         .btn-outline:hover {
             background: var(--primary);
             color: white;
+        }
+        
+        .btn-whatsapp {
+            background: var(--whatsapp);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: var(--whatsapp-dark);
         }
         
         .map-container {
@@ -354,6 +369,19 @@
             font-size: 16px;
         }
         
+        .business-contact {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
         .business-actions {
             display: flex;
             gap: 10px;
@@ -374,12 +402,12 @@
         }
         
         .whatsapp-btn {
-            background: var(--primary);
+            background: var(--whatsapp);
             color: white;
         }
         
         .whatsapp-btn:hover {
-            background: var(--primary-dark);
+            background: var(--whatsapp-dark);
         }
         
         .facebook-btn {
@@ -426,7 +454,7 @@
         }
         
         .whatsapp-icon {
-            background: var(--primary);
+            background: var(--whatsapp);
         }
         
         .facebook-icon {
@@ -471,6 +499,31 @@
             color: var(--gray);
             font-size: 14px;
             line-height: 1.6;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--whatsapp);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background: var(--whatsapp-dark);
+            transform: scale(1.1);
         }
         
         /* Footer */
@@ -542,6 +595,7 @@
                 flex-direction: column;
                 width: 100%;
                 text-align: center;
+                display: none;
             }
             
             .mobile-toggle {
@@ -565,6 +619,14 @@
             
             .search-box, .category-select {
                 width: 100%;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
             }
         }
     </style>
@@ -665,13 +727,17 @@
                             <span class="location-icon">📍</span>
                             Pointe-à-Pitre, Guadeloupe
                         </div>
+                        <div class="business-contact">
+                            <span class="contact-icon">📞</span>
+                            <span>+590 590 12 34 56</span>
+                        </div>
                         <div class="business-actions">
-                            <button class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/590590123456" class="action-btn whatsapp-btn" target="_blank">
                                 <span>💬</span> WhatsApp
-                            </button>
-                            <button class="action-btn facebook-btn">
+                            </a>
+                            <a href="https://facebook.com/artisanatcaribes" class="action-btn facebook-btn" target="_blank">
                                 <span>f</span> Facebook
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -686,13 +752,17 @@
                             <span class="location-icon">📍</span>
                             Les Abymes, Guadeloupe
                         </div>
+                        <div class="business-contact">
+                            <span class="contact-icon">📞</span>
+                            <span>+590 590 23 45 67</span>
+                        </div>
                         <div class="business-actions">
-                            <button class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/590590234567" class="action-btn whatsapp-btn" target="_blank">
                                 <span>💬</span> WhatsApp
-                            </button>
-                            <button class="action-btn facebook-btn">
+                            </a>
+                            <a href="https://facebook.com/agriculturebiogp" class="action-btn facebook-btn" target="_blank">
                                 <span>f</span> Facebook
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -707,13 +777,17 @@
                             <span class="location-icon">📍</span>
                             Baie-Mahault, Guadeloupe
                         </div>
+                        <div class="business-contact">
+                            <span class="contact-icon">📞</span>
+                            <span>+590 590 34 56 78</span>
+                        </div>
                         <div class="business-actions">
-                            <button class="action-btn whatsapp-btn">
+                            <a href="https://wa.me/590590345678" class="action-btn whatsapp-btn" target="_blank">
                                 <span>💬</span> WhatsApp
-                            </button>
-                            <button class="action-btn facebook-btn">
+                            </a>
+                            <a href="https://facebook.com/servicesnumag" class="action-btn facebook-btn" target="_blank">
                                 <span>f</span> Facebook
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -724,9 +798,9 @@
     <!-- Connect Section -->
     <section class="connect" id="connecter">
         <div class="container">
-            <h2 class="section-title">Connectez vos groupes</h2>
+            <h2 class="section-title">Connectez vos groupes WhatsApp</h2>
             <p style="text-align: center; color: var(--gray); margin-bottom: 40px;">
-                Reliez vos groupes WhatsApp et Facebook de la Guadeloupe pour créer un réseau économique solidaire
+                Reliez vos groupes WhatsApp de la Guadeloupe pour créer un réseau économique solidaire
             </p>
             
             <div class="connect-grid">
@@ -734,14 +808,16 @@
                     <div class="connect-icon whatsapp-icon">💬</div>
                     <h3 class="connect-title">Groupes WhatsApp</h3>
                     <p class="connect-desc">Connectez vos groupes WhatsApp de la Guadeloupe pour partager les offres locales avec vos contacts.</p>
-                    <button class="btn">Connecter WhatsApp</button>
+                    <a href="https://wa.me/590590000000" class="btn btn-whatsapp" target="_blank">
+                        <span>💬</span> WhatsApp
+                    </a>
                 </div>
                 
                 <div class="connect-card">
                     <div class="connect-icon facebook-icon">f</div>
                     <h3 class="connect-title">Groupes Facebook</h3>
                     <p class="connect-desc">Intégrez vos groupes Facebook de la Guadeloupe pour étendre votre réseau commercial.</p>
-                    <button class="btn">Connecter Facebook</button>
+                    <a href="https://facebook.com/kawoukeravoregp" class="btn" target="_blank">Connecter Facebook</a>
                 </div>
             </div>
             
@@ -773,8 +849,8 @@
                         <span>Guadeloupe, Antilles françaises</span>
                     </div>
                     <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <span>+590 590 XX XX XX</span>
+                        <span class="contact-icon">💬</span>
+                        <span>+590 590 12 34 56 (WhatsApp)</span>
                     </div>
                 </div>
                 
@@ -785,6 +861,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/590590123456" class="whatsapp-float" target="_blank">
+        💬
+    </a>
 
     <script>
         // Simple navigation
@@ -827,7 +908,28 @@
                     navMenu.style.display = 'none';
                 }
             });
+            
+            // Search functionality
+            const searchInput = document.querySelector('.search-box input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const businessCards = document.querySelectorAll('.business-card');
+                    
+                    businessCards.forEach(card => {
+                        const title = card.querySelector('.business-title').textContent.toLowerCase();
+                        const desc = card.querySelector('.business-desc').textContent.toLowerCase();
+                        
+                        if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
         });
     </script>
 </body>
 </html>
+```
